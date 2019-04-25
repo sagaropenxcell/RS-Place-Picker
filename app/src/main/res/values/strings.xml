@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MapActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="search_location">Search Location</string>
+    <string name="select_location">Select Location</string>
+    <string name="ok">Ok</string>
+    <string name="unable_to_retrieve">Unable to Retrieve location. Enable your Location from setting.</string>
+    <string name="permission_location">Location permission is require to determine your current location.</string>
+    <string name="generating_address">Generating Address</string>
+    <string name="please_wait">Please Wait</string>
+</resources>

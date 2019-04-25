@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/txt_search_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/iv_marker"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="15dp"
+                android:text=""
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/iv_pin_dot"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@mipmap/place_holder"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_pin_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/pin_dot"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_confirm_address"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#000"
+                    android:padding="5dp"
+                    android:text="@string/select_location"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ic_current_location"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/circle_white"
+                    android:contentDescription="@null"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_current_location" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.MyApp.Toolbar.Solid"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:visibility="visible"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/ToolbarStyle"
+                app:titleTextColor="?attr/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_grey_border">
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignEnd="@+id/iv_clear"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:hint="@string/search_location"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:paddingEnd="6dp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="30dp"
+                    android:paddingBottom="5dp"
+                    android:text=""
+                    android:textColor="@color/primary_text_color"
+                    android:textColorHint="@color/secondary_text_color" />
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@null"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="26dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="3dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+    </RelativeLayout>
+</layout>
