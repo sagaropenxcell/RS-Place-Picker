@@ -196,7 +196,6 @@ public class MapsActivity extends AppCompatActivity implements GoogleApiClient.O
         mBinding.icCurrentLocation.performClick();
     }
 
-
     @Override
     public void onCameraMoveStarted(int reason) {
         Log.e("onCameraMoveStarted", "onCameraMoveStarted");
